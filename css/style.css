@@ -86,7 +86,7 @@ body {
 
 .row table {
     margin-top: 50px;
-    margin-left: 80px;
+    margin-left: 430px;
 }
 
 .FollowUs {
@@ -112,7 +112,7 @@ body {
     background-color: #193313;
     border-radius: 5px;
     margin-top: 50px;
-    margin-left: 330px;
+    margin-left: 650px;
     width: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
