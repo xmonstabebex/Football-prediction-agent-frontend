@@ -9,6 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Bakbak One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 
 </head>
 
@@ -49,232 +50,618 @@
                 <!--Navigation bar ends-->
 
                 <!--Content on the right side of the site-->
-                <div class="col-8" id="content">
-                    <div class="row">
-                        <div class="col-3"><img id="first" src="imgs/beşiktaş.png" alt="">
-                            <h1>Beşiktaş</h1>
-                        </div>
-                        <div class="col-3" id="text">
-                            <!--The match details-->
-                            <h1>2 - 1</h1>
-                            <h2><span><i class="fa-solid fa-calendar"></i></span> January 04, 2024</h2>
-                            <h2><span><i class="fa-solid fa-location-dot"></i></span> Ali Sami Yen Stadium</h2>
-                            <h2>
-                                <div class="dropdown"><!--Weather Dropdown-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fa-solid fa-cloud-sun"></i> Sunny and mild <span>19°/8°</span>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="weather">Degree
-                                                    Celsius:</label><input type="text" id="weather"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
-                            </h2>
-                        </div>
-                        <div class="col-3"><img id="second" src="imgs/fenerbahce.png" alt="">
-                            <h1>Fenerbahçe</h1>
-                        </div>
+                <form action="">
+                    <div class="col-8" id="content">
                         <div class="row">
+                            <div class="col-3"><img id="first" src="imgs/beşiktaş.png" alt="">
+                                <h1>Beşiktaş</h1>
+                            </div>
+                            <div class="col-3" id="text">
+                                <!--The match details-->
+                                <h1>2 - 1</h1>
+                                <h2><span><i class="fa-solid fa-calendar"></i></span> January 04, 2024</h2>
+                                <h2><span><i class="fa-solid fa-location-dot"></i></span> Ali Sami Yen Stadium</h2>
+                                <h2>
+                                    <div class="dropdown"><!--Weather Dropdown-->
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-cloud-sun"></i> Sunny and mild <span>19°/8°</span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#"><label for="weather">Degree
+                                                        Celsius:</label><input type="text" id="weather"></a></li>
+                                            <li><a class="dropdown-item" href="#"><input type="range"></a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                </h2>
+                            </div>
+                            <div class="col-3"><img id="second" src="imgs/fenerbahce.png" alt="">
+                                <h1>Fenerbahçe</h1>
+                            </div>
+                        </div>
+                        <!--Switch between datas-->
+                        <div class="row">
+                            <div class="switch-buttons">
+                                <button class="active" onclick="showSection('teams', event)">Team</button>
+                                <button onclick="showSection('players', event)">Players</button>
+                            </div>
+                        </div>
+                        <div class="row show" id="teams">
                             <!--Home Stats-->
-                            <div class="col-3" id="Home-details"> <!--LABEL VE INPUT BAGLI DEGILLER-->
-                                <div class="dropdown"><!--Team's Value-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Team's Value : 1.9B </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Ball possession rate-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Ball possession rate: 5.5 </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Total Shots-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Total Shots: 30</button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Off-target shots-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Off-target shots: 180 </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Saves-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Saves : 20 </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Corner Kicks-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Corner Kicks: </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Free Kicks-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Free Kicks: </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Fouls-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Fouls: </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Offsides-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Offsides: </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
+                            <div class="col-4">
+                                <table class="table text-center" id="Home-details">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" colspan="1">#</th>
+                                            <th scope="col" colspan="1">Team</th>
+                                            <th scope="col" colspan="1">data</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Team's Value: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Ball possession rate:</td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Total Shots: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Off-target shots: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Corner Kicks: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>Free Kicks: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7</th>
+                                            <td>Fouls: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">8</td>
+                                            <td>Offsides: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--Away Stats-->
+                            <div class="col-4">
+                                <table class="table text-center" id="Away-details">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" colspan="1">#</th>
+                                            <th scope="col" colspan="1">Team</th>
+                                            <th scope="col" colspan="1">data</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Team's Value: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Ball possession rate:</td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Total Shots: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Off-target shots: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Corner Kicks: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>Free Kicks: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7</th>
+                                            <td>Fouls: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">8</td>
+                                            <td>Offsides: </td>
+                                            <td>
+                                                <input type="text" value="Random">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row show" id="players">
+                            <div class="col-4">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="carousel-caption">
-                                            <h1>Hello Apple</h1>
+                                            <div class="row">
+                                                <h2>
+                                                    <div class="dropdown"><!--Team's Value-->
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                            id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa-solid fa-circle"></i></button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#"><label for="">Text:
+                                                                    </label>
+                                                                    <input type="text"></a></li>
+                                                            <li><a class="dropdown-item" href="#"><input
+                                                                        type="range"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </h2>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4" id="pos-3">
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="col-4" id="pos-2">
+                                                <h2>
+                                                    <div class="dropdown"><!--Team's Value-->
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                            id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa-solid fa-circle"></i></button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#"><label for="">Text:
+                                                                    </label>
+                                                                    <input type="text"></a></li>
+                                                            <li><a class="dropdown-item" href="#"><input
+                                                                        type="range"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </h2>
+                                                <h2>
+                                                    <div class="dropdown"><!--Team's Value-->
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                            id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa-solid fa-circle"></i></button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#"><label for="">Text:
+                                                                    </label>
+                                                                    <input type="text"></a></li>
+                                                            <li><a class="dropdown-item" href="#"><input
+                                                                        type="range"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </h2>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4" id="pos-4">
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <h2>
+                                                    <div class="dropdown"><!--Team's Value-->
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                            id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa-solid fa-circle"></i></button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#"><label for="">Text:
+                                                                    </label>
+                                                                    <input type="text"></a></li>
+                                                            <li><a class="dropdown-item" href="#"><input
+                                                                        type="range"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </h2>
+                                            </div>
                                         </div>
                                         <img src="imgs/pitch.jpg" class="img-01" alt="slider">
                                     </div>
                                 </div>
                             </div>
-                            <!--Away Stats-->
-                            <div class="col-3" id="Away-details"> <!--LABEL VE INPUT BAGLI DEGILLER-->
-                                <div class="dropdown"><!--Team's Value-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Team's Value : 1.9B </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Ball possession rate-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Ball possession rate: 5.5 </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Total Shots-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Total Shots: 30</button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Off-target shots-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Off-target shots: 180 </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Saves-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Saves : 20 </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Corner Kicks-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Corner Kicks: </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Free Kicks-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Free Kicks: </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Fouls-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Fouls: </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown"><!--Offsides-->
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Offsides: </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#"><label for="">Text: </label>
-                                                <input type="text"></a></li>
-                                        <li><a class="dropdown-item" href="#"><input type="range"></a></li>
-                                    </ul>
+                            <div class="col-4">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="carousel-caption">
+                                            <div class="row">
+                                                <h2>
+                                                    <div class="dropdown"><!--Team's Value-->
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                            id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa-solid fa-circle"></i></button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#"><label for="">Text:
+                                                                    </label>
+                                                                    <input type="text"></a></li>
+                                                            <li><a class="dropdown-item" href="#"><input
+                                                                        type="range"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </h2>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4" id="pos-3">
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="col-4" id="pos-2">
+                                                <h2>
+                                                    <div class="dropdown"><!--Team's Value-->
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                            id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa-solid fa-circle"></i></button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#"><label for="">Text:
+                                                                    </label>
+                                                                    <input type="text"></a></li>
+                                                            <li><a class="dropdown-item" href="#"><input
+                                                                        type="range"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </h2>
+                                                <h2>
+                                                    <div class="dropdown"><!--Team's Value-->
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                            id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa-solid fa-circle"></i></button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#"><label for="">Text:
+                                                                    </label>
+                                                                    <input type="text"></a></li>
+                                                            <li><a class="dropdown-item" href="#"><input
+                                                                        type="range"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </h2>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4" id="pos-4">
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                    <h2>
+                                                        <div class="dropdown"><!--Team's Value-->
+                                                            <button class="btn btn-secondary dropdown-toggle"
+                                                                type="button" id="dropdownMenuButton1"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fa-solid fa-circle"></i></button>
+                                                            <ul class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#"><label
+                                                                            for="">Text:
+                                                                        </label>
+                                                                        <input type="text"></a></li>
+                                                                <li><a class="dropdown-item" href="#"><input
+                                                                            type="range"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <h2>
+                                                    <div class="dropdown"><!--Team's Value-->
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                            id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa-solid fa-circle"></i></button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#"><label for="">Text:
+                                                                    </label>
+                                                                    <input type="text"></a></li>
+                                                            <li><a class="dropdown-item" href="#"><input
+                                                                        type="range"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                        <img src="imgs/pitch.jpg" class="img-01" alt="slider">
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col" id="submit"><button type="submit">Edit</button></div>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
