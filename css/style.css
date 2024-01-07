@@ -693,9 +693,8 @@ form {
         font-size: 1rem;
     }
 
-    #costum {
-        margin
-        -left: 10%;
+    #custom {
+        margin-left: 100%;
     }
 
     #table table {
@@ -736,7 +735,7 @@ form {
         margin-left: 20%;
     }
 
-    .border {
+    #box .border {
         margin-left: -5%;
         width: 99%;
     }
@@ -832,6 +831,17 @@ form {
         font-size: 0.7rem;
     }
 
+    #box .border {
+        margin-left: -5%;
+        width: 99%;
+    }
+    #custom .border{
+        margin-left : 0%;
+    }
+    #custom{
+        margin-left : 100%;
+    }
+
     #box img {
         width: 50%;
         height: 50%;
@@ -850,7 +860,7 @@ form {
     }
 
     #box #submit {
-        margin-left: 35%;
+        margin-left: 30%;
         margin-bottom: 0px;
     }
 
@@ -901,11 +911,11 @@ form {
 
 @media (min-width: 1200px) {
     #table table {
-        margin-left: 370px;
+        margin-left: 50%;
     }
 
     #buttons button {
-        margin-left: 520px;
+        margin-left: 650px;
     }
 
     #navbar {
@@ -914,14 +924,18 @@ form {
     }
 
     #navbar .Menu a {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .FollowUs a,
     .FollowUs p {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
+    #box .border {
+        margin-left: -3%;
+        width: 100%;
+    }
 
     #box img {
         width: 50%;
@@ -941,17 +955,17 @@ form {
     }
 
     #box #submit {
-        margin-left: 35%;
+        margin-left: 30%;
         margin-bottom: 0px;
     }
 
     #box #or {
-        margin-right: 10%;
+        margin-left: -5%;
     }
 
     #box h1 a,
     #box h1 span {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     #content img {
@@ -1005,5 +1019,41 @@ form {
 
     .FollowUs {
         margin-top: 100%;
+    }
+
+    #box .border {
+        margin-left: -3%;
+        width: 100%;
+    }
+
+    #box img {
+        width: 50%;
+        height: 50%;
+        margin-left: 20%;
+    }
+
+    #box {
+        margin-left: 60%;
+        width: 100%;
+        height: 85%;
+    }
+
+    #box select {
+        margin-left: 35%;
+        width: 40%;
+    }
+
+    #box #submit {
+        margin-left: 30%;
+        margin-bottom: 0px;
+    }
+
+    #box #or {
+        margin-left: -5%;
+    }
+
+    #box h1 a,
+    #box h1 span {
+        font-size: 1.5rem;
     }
 }
