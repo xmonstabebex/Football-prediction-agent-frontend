@@ -32,3 +32,34 @@ function showSection(sectionId, event) {
 window.onload = function () {
     showSection('teams', { preventDefault: function () { } }); // Use an empty event object to prevent errors
 };
+function changeImage(team) {
+    var teamSelect;
+
+    if (team) {
+        teamSelect = document.getElementById(`teamSelect${team.charAt(0).toUpperCase() + team.slice(1)}`);
+    } else {
+        teamSelect = document.getElementById("teamSelect");
+        team = ""; // Set an empty string for the default case
+    }
+
+    var teamImage = document.getElementById(team || "teamImage");
+
+    // Get the selected option value
+    var selectedTeam = teamSelect.value;
+
+    // Set the image source based on the selected option
+    switch (selectedTeam) {
+        case "Manchester":
+            teamImage.src = `imgs/manchester${team ? `_${team}` : ''}.png`;
+            break;
+        case "Galatasaray":
+            teamImage.src = `imgs/galatasaray${team ? `_${team}` : ''}.png`;
+            break;
+        case "Şırnakspor":
+            teamImage.src = `imgs/şırnakspor${team ? `_${team}` : ''}.png`;
+            break;
+        default:
+            // Set a default image source if needed
+            teamImage.src = `imgs/default${team ? `_${team}` : ''}.png`;
+    }
+}
