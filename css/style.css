@@ -183,9 +183,11 @@ body {
     margin-left: 230px;
     width: 30%;
 }
-#box option{
-    color : #193313;
+
+#box option {
+    color: #193313;
 }
+
 #box #submit {
     color: #193313;
     background-color: white;
@@ -227,7 +229,7 @@ body {
     font-family: 'Bakbak One';
     margin-bottom: 10px;
     margin-left: 100px;
-    width : 50%;
+    width: 50%;
 }
 
 #custom option {
@@ -653,6 +655,49 @@ form {
         margin-left: 60px;
     }
 
+    #navbar {
+        display: none;
+    }
+
+    #box img {
+        width: 50%;
+        height: 50%;
+        margin-left: 20%;
+    }
+
+    .border {
+        margin-left: -5%;
+        width: 99%;
+    }
+
+    #box {
+        margin-left: 25%;
+        width: 100%;
+        height: 80%;
+    }
+
+    #box select {
+        margin-left: 30%;
+        width: 40%;
+    }
+
+    #box #submit {
+        margin-left: 30%;
+        margin-bottom: 0px;
+        width: 30%;
+        font-size: 1rem;
+    }
+
+    #box h1 a,
+    #box h1 span {
+        font-size: 1rem;
+    }
+
+    #costum {
+        margin
+        -left: 10%;
+    }
+
     #table table {
         margin-left: 340px;
         font-size: 15px;
@@ -680,64 +725,54 @@ form {
     #buttons button {
         margin-left: 450px;
     }
-}
 
-@media (min-width: 992px) {
     #navbar {
-        width: 240px;
+        display: none;
     }
 
-    #table table {
-        margin-left: 280px;
-        width: 700px;
-        font-size: 15px;
+    #box img {
+        width: 50%;
+        height: 50%;
+        margin-left: 20%;
     }
 
-    #buttons button {
-        margin-left: 450px;
+    .border {
+        margin-left: -5%;
+        width: 99%;
     }
 
-    #content img {
-        width: 60%;
-        height: 60%;
+    #box {
+        margin-left: 25%;
+        width: 100%;
+        height: 80%;
     }
 
-    #content h2 {
+    #box select {
+        margin-left: 30%;
+        width: 40%;
+    }
+
+    #box #submit {
+        margin-left: 30%;
+        margin-bottom: 0px;
+        width: 30%;
         font-size: 1rem;
     }
 
-    #content h1 {
-        font-size: 1.5rem;
-    }
-
-    #content #text {
-        margin-left: 0px;
-        margin-top: 0px;
-    }
-
-    #content table {
-        width: 100%;
-        height: 50%;
-        margin-left: 22%;
-    }
-
-    #content .switch-buttons {
-        margin-left: 38%;
-    }
-}
-
-@media (min-width: 1200px) {
-    #table table {
-        margin-left: 370px;
-    }
-
-    #buttons button {
-        margin-left: 520px;
+    #box h1 a,
+    #box h1 span {
+        font-size: 1rem;
     }
 
     #content img {
         width: 60%;
         height: 60%;
+        margin-left: 10%;
+    }
+
+    #content {
+        width: 100%;
+        height: 90%;
         margin-left: 10%;
     }
 
@@ -756,10 +791,206 @@ form {
 
     #content table {
         width: 100%;
+        height: 50%;
     }
 
     #content .switch-buttons {
         margin-left: 38%;
+    }
+
+    #content #submit {
+        margin-left: 40%;
+    }
+}
+
+@media (min-width: 992px) {
+    #navbar {
+        width: 240px;
+    }
+
+    #table table {
+        margin-left: 280px;
+        width: 700px;
+        font-size: 15px;
+    }
+
+    #buttons button {
+        margin-left: 450px;
+    }
+
+    #navbar {
+        display: inline;
+        width: 15%;
+    }
+
+    #navbar .Menu a {
+        font-size: 0.7rem;
+    }
+
+    .FollowUs a,
+    .FollowUs p {
+        font-size: 0.7rem;
+    }
+
+    #box img {
+        width: 50%;
+        height: 50%;
+        margin-left: 20%;
+    }
+
+    #box {
+        margin-left: 25%;
+        width: 100%;
+        height: 80%;
+    }
+
+    #box select {
+        margin-left: 30%;
+        width: 40%;
+    }
+
+    #box #submit {
+        margin-left: 35%;
+        margin-bottom: 0px;
+    }
+
+    #box h1 a,
+    #box h1 span {
+        font-size: 1rem;
+    }
+
+    #content img {
+        width: 60%;
+        height: 60%;
+        margin-left: 20%;
+    }
+
+    #content {
+        width: 70%;
+        height: 85%;
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+
+    #content h2 {
+        font-size: 1rem;
+    }
+
+    #content h1 {
+        font-size: 1.5rem;
+    }
+
+    #content #text {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    #content table {
+        width: 100%;
+        height: 100%;
+    }
+
+    #content .switch-buttons {
+        margin-left: 38%;
+    }
+
+    #content #submit {
+        margin-left: 40%;
+    }
+}
+
+@media (min-width: 1200px) {
+    #table table {
+        margin-left: 370px;
+    }
+
+    #buttons button {
+        margin-left: 520px;
+    }
+
+    #navbar {
+        display: inline;
+        width: 20%;
+    }
+
+    #navbar .Menu a {
+        font-size: 1rem;
+    }
+
+    .FollowUs a,
+    .FollowUs p {
+        font-size: 1rem;
+    }
+
+
+    #box img {
+        width: 50%;
+        height: 50%;
+        margin-left: 20%;
+    }
+
+    #box {
+        margin-left: 40%;
+        width: 100%;
+        height: 85%;
+    }
+
+    #box select {
+        margin-left: 35%;
+        width: 40%;
+    }
+
+    #box #submit {
+        margin-left: 35%;
+        margin-bottom: 0px;
+    }
+
+    #box #or {
+        margin-right: 10%;
+    }
+
+    #box h1 a,
+    #box h1 span {
+        font-size: 1rem;
+    }
+
+    #content img {
+        width: 70%;
+        height: 70%;
+        margin-left: 30%;
+    }
+
+    #content {
+        width: 70%;
+        height: 90%;
+        margin-left: 20%;
+    }
+
+    #content h2 {
+        font-size: 1rem;
+    }
+
+    #content h1 {
+        font-size: 1.5rem;
+        margin-left: 30%;
+    }
+
+    #content #text {
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    #content table {
+        width: 100%;
+        height: 50%;
+    }
+
+    #content .switch-buttons {
+        margin-left: 38%;
+    }
+
+    #content #submit {
+        margin-left: 40%;
     }
 }
 
