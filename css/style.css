@@ -57,7 +57,7 @@ body {
 
 #navbar {
     background-color: #193313;
-    height: 720px;
+    height: 100%;
     position: fixed;
 }
 
@@ -173,34 +173,33 @@ body {
     font-size: 30px;
 }
 
-
-#box .dropdown button {
+#box select {
     background: none;
     border: none;
+    color: white;
     font-size: 20px;
-    font-weight: bold;
+    font-family: 'Bakbak One';
+    margin-bottom: 10px;
+    margin-left: 230px;
+    width: 30%;
 }
-
-#box .dropdown li a {
-    font-size: 15px;
-    color: black;
-    font-weight: bold;
+#box option{
+    color : #193313;
 }
-
 #box #submit {
     color: #193313;
     background-color: white;
     font-size: 20px;
     width: 20%;
     font-weight: bold;
-    margin-left: 0px;
+    margin-left: 40%;
 }
 
 #custom {
     background-color: #193313;
     border-radius: 10px;
     margin-top: 150px;
-    margin-left: 550px;
+    margin-left: 450px;
     width: 760px;
     align-items: center;
     justify-content: center;
@@ -215,37 +214,24 @@ body {
     margin-top: 10px;
 }
 
-#custom #select {
-    background-color: white;
-    color: #193313;
-    font-family: 'Bakbak One';
-    font-size: 25px;
-    border-radius: 10px;
-    width: 30%;
-    margin-top: 20px;
-    margin-left: 250px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 #custom #second {
     margin-left: 200px;
 }
 
-#custom .dropdown button {
+#custom select {
     background: none;
     border: none;
+    color: white;
     font-size: 20px;
-    font-weight: bold;
+    font-family: 'Bakbak One';
+    margin-bottom: 10px;
+    margin-left: 100px;
+    width : 50%;
 }
 
-#custom .dropdown ul {
-    padding: 10px;
-}
-
-#custom .dropdown li {
-    font-size: 15px;
-    font-weight: bold;
+#custom option {
+    color: #193313;
 }
 
 #custom #second-team {
@@ -658,7 +644,7 @@ form {
     }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
     #navbar .Menu a {
         font-size: 15px;
     }
@@ -686,9 +672,17 @@ form {
     }
 }
 
-@media (max-width: 768px) {}
+@media (min-width: 768px) {
+    #table table {
+        margin-left: 330px;
+    }
 
-@media (max-width: 992px) {
+    #buttons button {
+        margin-left: 450px;
+    }
+}
+
+@media (min-width: 992px) {
     #navbar {
         width: 240px;
     }
@@ -702,9 +696,37 @@ form {
     #buttons button {
         margin-left: 450px;
     }
+
+    #content img {
+        width: 60%;
+        height: 60%;
+    }
+
+    #content h2 {
+        font-size: 1rem;
+    }
+
+    #content h1 {
+        font-size: 1.5rem;
+    }
+
+    #content #text {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    #content table {
+        width: 100%;
+        height: 50%;
+        margin-left: 22%;
+    }
+
+    #content .switch-buttons {
+        margin-left: 38%;
+    }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
     #table table {
         margin-left: 370px;
     }
@@ -712,14 +734,45 @@ form {
     #buttons button {
         margin-left: 520px;
     }
+
+    #content img {
+        width: 60%;
+        height: 60%;
+        margin-left: 10%;
+    }
+
+    #content h2 {
+        font-size: 1rem;
+    }
+
+    #content h1 {
+        font-size: 1.5rem;
+    }
+
+    #content #text {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    #content table {
+        width: 100%;
+    }
+
+    #content .switch-buttons {
+        margin-left: 38%;
+    }
 }
 
-@media (min-width : 1200px) {
+@media (min-width : 1500px) {
     #table table {
-        margin-left: 370px;
+        margin-left: 450px;
     }
 
     #buttons button {
         margin-left: 650px;
+    }
+
+    .FollowUs {
+        margin-top: 100%;
     }
 }
