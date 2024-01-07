@@ -9,6 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Bakbak One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -49,7 +50,7 @@
                         <div class="col">
                             <div class="row">
                                 <div id="team">
-                                    <select class="form-select" id="teamSelect">
+                                    <select class="form-select" id="teamSelect" onchange="changeImage()">
                                         <option value="Manchester">Manchester</option>
                                         <option value="Galatasaray">Galatasaray</option>
                                         <option value="Şırnakspor">Şırnakspor</option>
@@ -58,12 +59,12 @@
                             </div>
                             <div class="row border"></div>
                             <div class="row">
-                                <img src="imgs/manchester.png" alt="">
+                                <img src="imgs/manchester.png" alt="" id="teamImage">
                             </div>
                             <div class="row border"></div>
                             <div class="row">
                                 <input type="submit" class="btn" value="Select" id="submit">
-                                <h1><a href="custom.html"><span>OR</span> Custom Match</a></h1>
+                                <h1 id="or"><a href="custom.html"><span>OR</span> Custom Match</a></h1>
                             </div>
                         </div>
                     </form>
