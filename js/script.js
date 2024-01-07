@@ -15,7 +15,6 @@ function showSection(sectionId, event) {
     document.getElementById('teams').style.display = 'none';
     document.getElementById('players').style.display = 'none';
 
-    // Remove the 'active' class from all buttons
     var buttons = document.querySelectorAll('.switch-buttons button');
     buttons.forEach(function (button) {
         button.classList.remove('active');
@@ -27,27 +26,36 @@ function showSection(sectionId, event) {
     // Add the 'active' class to the clicked button
     event.target.classList.add('active');
 }
-
-// Show the 'teams' section and make the 'Team' button active on page load
 window.onload = function () {
     showSection('teams', { preventDefault: function () { } }); // Use an empty event object to prevent errors
 };
+
+//change the team's logo after selecting option
 function changeImage(team) {
     var teamSelect;
-
+    var selectedTeam;
     if (team) {
         teamSelect = document.getElementById(`teamSelect${team.charAt(0).toUpperCase() + team.slice(1)}`);
     } else {
         teamSelect = document.getElementById("teamSelect");
-        team = ""; // Set an empty string for the default case
+        team = "";
     }
-
     var teamImage = document.getElementById(team || "teamImage");
 
+    if (team == 'first') {
+        teamImage1 = document.getElementById("teamSelect1").value;
+        selectedTeam = teamImage1;
+        team = "";
+    } else if (team == 'second') {
+        teamImage2 = document.getElementById("teamSelect2").value;
+        console.log(teamImage2)
+        selectedTeam = teamImage2;
+        team = "";
+    } else {
+        selectedTeam = teamSelect.value;
+    }
     // Get the selected option value
-    var selectedTeam = teamSelect.value;
 
-    // Set the image source based on the selected option
     switch (selectedTeam) {
         case "Manchester":
             teamImage.src = `imgs/manchester${team ? `_${team}` : ''}.png`;
@@ -55,11 +63,10 @@ function changeImage(team) {
         case "Galatasaray":
             teamImage.src = `imgs/galatasaray${team ? `_${team}` : ''}.png`;
             break;
-        case "Şırnakspor":
-            teamImage.src = `imgs/şırnakspor${team ? `_${team}` : ''}.png`;
+        case "\u015E\u0131rnakspor": // Unicode escape sequence for "Şırnakspor"
+            teamImage.src = `imgs/sirnakspor${team ? `_${team}` : ''}.png`;
             break;
         default:
-            // Set a default image source if needed
             teamImage.src = `imgs/default${team ? `_${team}` : ''}.png`;
     }
 }
