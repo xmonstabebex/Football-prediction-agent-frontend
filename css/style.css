@@ -69,6 +69,11 @@ body {
     margin-top: 250px;
     margin-left: 40px;
     padding: 0px;
+    transition: 0.3s ease-in-out;
+}
+
+#navbar .Menu a:hover {
+    color: #b7e4c7;
 }
 
 #navbar img {
@@ -168,6 +173,9 @@ body {
     color: white;
     font-size: 20px;
 }
+#box a:hover{
+    text-decoration:underline
+}
 
 #box span {
     font-size: 30px;
@@ -182,6 +190,10 @@ body {
     margin-bottom: 10px;
     margin-left: 230px;
     width: 30%;
+    transition : 0.2s ease-out;
+}
+#box select:hover{
+    color : #b7e4c7;
 }
 
 #box option {
@@ -195,6 +207,15 @@ body {
     width: 20%;
     font-weight: bold;
     margin-left: 40%;
+    background-image: linear-gradient(to right, #e9ecef, #d8f3dc, #52b788);
+    cursor: pointer;
+    background-size: 200%;
+    transition: 1s ease-in-out;
+}
+
+#box #submit:hover {
+    background-position: right;
+    color: #248277;
 }
 
 #custom {
@@ -230,6 +251,11 @@ body {
     margin-bottom: 10px;
     margin-left: 100px;
     width: 50%;
+    transition: 0.5s ease-out;
+}
+
+#custom select:hover {
+    color: #b7e4c7;
 }
 
 #custom option {
@@ -241,12 +267,26 @@ body {
 }
 
 #custom #submit {
+    display: block;
+    width: 50%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    margin-left: 25%;
+    background-image: linear-gradient(to right, #e9ecef, #d8f3dc, #52b788);
+    background-size: 200%;
+    font-size: 1.2rem;
     color: #193313;
-    background-color: white;
-    font-size: 20px;
-    width: 20%;
-    font-weight: bold;
-    margin-left: 290px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+#custom #submit:hover {
+    background-position: right;
+    color: #248277;
 }
 
 #content {
